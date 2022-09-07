@@ -8,11 +8,11 @@ CFLAGS = -Wall -g -std=gnu99
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = basics
+APPNAME = basics arrays
 
 OBJFILES = basics.o
 
-# all: $(APPNAME)
+all: $(APPNAME)
 
 # # Builds the app
 # $(APPNAME): $(OBJFILES)
@@ -27,7 +27,7 @@ OBJFILES = basics.o
 # clean:
 # 	rm $(APPNAME) *.o
 
-basics: basics.c
+%: %.c
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 # Cleans executables
